@@ -1,7 +1,9 @@
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers.upload import router as upload_router
 from app.routers.github import router as github_router
+from app.routers.analyzer import router as analyzer_router
 
 
 app = FastAPI(title="DevPilot AI")
@@ -20,3 +22,4 @@ def home():
 
 app.include_router(upload_router)
 app.include_router(github_router)
+app.include_router(analyzer_router)

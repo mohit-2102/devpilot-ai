@@ -1,6 +1,7 @@
 import tempfile
 from pathlib import Path
 import subprocess
+# from app.services.parser_service import analyze_repository
 
 
 def clone_repository(url: str):
@@ -21,11 +22,11 @@ def clone_repository(url: str):
     print(result.returncode)
     print(result.stdout)
     print(result.stderr)
+    from app.services.parser_service import analyze_repository
+
+    analysis = analyze_repository(str(repo_path))
+    
     return {
-        "url": url,
-        "temp_directory": str(temp_dir),
-        "repository_path": str(repo_path),
         "success": result.returncode == 0,
-        "stdout": result.stdout,
-        "stderr": result.stderr,
-    }
+        "analysis": analysis,
+    } 
