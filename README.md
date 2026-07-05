@@ -2,37 +2,51 @@
 ```
 devpilot-ai
 ├─ backend
-│  └─ app
-│     ├─ main.py
-│     ├─ models
-│     │  └─ __init__.py
-│     ├─ routers
-│     │  ├─ analyzer.py
-│     │  ├─ github.py
-│     │  ├─ upload.py
-│     │  └─ __init__.py
-│     ├─ schemas
-│     │  ├─ analyzer_schema.py
-│     │  ├─ github_schema.py
-│     │  ├─ repository_schema.py
-│     │  └─ __init__.py
-│     ├─ services
-│     │  ├─ analyzer_service.py
-│     │  ├─ file_discovery.py
-│     │  ├─ github_service.py
-│     │  ├─ parser_service.py
-│     │  ├─ scanners
-│     │  │  ├─ config_scanner.py
-│     │  │  ├─ documentation_scanner.py
-│     │  │  ├─ filesystem_scanner.py
-│     │  │  ├─ manifest_scanner.py
-│     │  │  ├─ metadata_scanner.py
-│     │  │  ├─ source_scanner.py
-│     │  │  └─ __init__.py
-│     │  ├─ storage_service.py
-│     │  └─ __init__.py
-│     └─ utils
-│        └─ __init__.py
+│  ├─ app
+│  │  ├─ main.py
+│  │  ├─ models
+│  │  │  └─ __init__.py
+│  │  ├─ routers
+│  │  │  ├─ analyzer.py
+│  │  │  ├─ github.py
+│  │  │  ├─ upload.py
+│  │  │  └─ __init__.py
+│  │  ├─ schemas
+│  │  │  ├─ analyzer_schema.py
+│  │  │  ├─ github_schema.py
+│  │  │  ├─ repository_schema.py
+│  │  │  └─ __init__.py
+│  │  ├─ services
+│  │  │  ├─ analyzer_service.py
+│  │  │  ├─ context_builder.py
+│  │  │  ├─ file_discovery.py
+│  │  │  ├─ github_service.py
+│  │  │  ├─ llm_service.py
+│  │  │  ├─ parser_service.py
+│  │  │  ├─ prompts
+│  │  │  │  ├─ architecture_prompt.py
+│  │  │  │  ├─ documentation_prompt.py
+│  │  │  │  ├─ explain_file_prompt.py
+│  │  │  │  ├─ qa_prompt.py
+│  │  │  │  ├─ readme_prompt.py
+│  │  │  │  └─ __init__.py
+│  │  │  ├─ prompt_builder.py
+│  │  │  ├─ providers
+│  │  │  │  ├─ base_provider.py
+│  │  │  │  └─ groq_provider.py
+│  │  │  ├─ scanners
+│  │  │  │  ├─ config_scanner.py
+│  │  │  │  ├─ documentation_scanner.py
+│  │  │  │  ├─ filesystem_scanner.py
+│  │  │  │  ├─ manifest_scanner.py
+│  │  │  │  ├─ metadata_scanner.py
+│  │  │  │  ├─ source_scanner.py
+│  │  │  │  └─ __init__.py
+│  │  │  ├─ storage_service.py
+│  │  │  └─ __init__.py
+│  │  └─ utils
+│  │     └─ __init__.py
+│  └─ requirements.txt
 ├─ frontend
 │  ├─ AGENTS.md
 │  ├─ CLAUDE.md

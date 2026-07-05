@@ -4,6 +4,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.routers.upload import router as upload_router
 from app.routers.github import router as github_router
 from app.routers.analyzer import router as analyzer_router
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 app = FastAPI(title="DevPilot AI")
